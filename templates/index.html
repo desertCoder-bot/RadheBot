@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadheBot - Tumhara Dost</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <select id="model-select">
+        <option value="gpt2">GPT-2</option>
+        <option value="tinyllama">TinyLlama</option>
+        <option value="distilgpt2">DistilGPT-2</option>
+        <option value="blenderbot">BlenderBot</option>
+        <option value="dialogpt">DialoGPT</option>
+    </select>
+    
+    <div class="container">
+        <h1>RadheBot</h1>
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <div id="input-area">
+                <input type="text" id="user-input" placeholder="Kuch poocho...">
+                <button onclick="sendMessage()">Bhejo</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
